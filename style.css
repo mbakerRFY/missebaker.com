@@ -122,30 +122,50 @@ nav a:hover { color: var(--sage); }
 
 .plane-wrap {
   flex-shrink: 0;
-  position: relative;
   width: 220px;
-  height: 180px;
+  height: 160px;
 }
 
-.plane {
-  width: 120px;
-  position: absolute;
-  top: 10px;
-  left: 50px;
-  animation: float 4s ease-in-out infinite;
+.flight-svg {
+  width: 220px;
+  height: 160px;
+  overflow: visible;
 }
 
-.flight-path {
-  width: 200px;
-  position: absolute;
-  top: 40px;
-  left: 0;
-  opacity: 0.7;
+/* Dashed path draws itself on load */
+@keyframes drawPath {
+  0%   { stroke-dashoffset: 400; }
+  100% { stroke-dashoffset: 0; }
 }
 
-@keyframes float {
-  0%, 100% { transform: translateY(0px) rotate(-3deg); }
-  50%       { transform: translateY(-12px) rotate(3deg); }
+/* Path gently pulses after drawing */
+@keyframes loopPath {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.6; }
+}
+
+/* Plane flies along the path */
+@keyframes flyPlane {
+  0%   { offset-distance: 0%;   opacity: 0; }
+  5%   { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 1; }
+}
+
+/* Plane gently hovers at end */
+@keyframes floatPlane {
+  0%, 100% { offset-distance: 100%; }
+  50%       { offset-distance: 96%; }
+}
+
+#planeGroup {
+  offset-path: path("M10,140 Q60,40 100,90 Q135,130 165,60 Q188,20 210,50");
+  offset-rotate: auto;
+  animation: flyPlane 3s ease-out forwards, floatPlane 4s ease-in-out 3s infinite;
+}
+
+#flightPath {
+  stroke-dashoffset: 400;
+  animation: drawPath 3s ease-out forwards, loopPath 4s ease-in-out 3s infinite;
 }
 
 .hero-text { flex: 1; }
