@@ -315,8 +315,14 @@ h2 em { color: var(--sage); font-style: italic; }
 }
 
 .service-icon {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1.25rem;
+}
+
+.service-icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .service-card h3 {
@@ -334,10 +340,114 @@ h2 em { color: var(--sage); font-style: italic; }
 
 /* ── Contact ── */
 .contact-inner { text-align: center; }
-.contact-inner p {
-  margin-bottom: 2rem;
+.contact-inner > p {
+  margin-bottom: 2.5rem;
   font-size: 1.05rem;
   color: var(--gray);
+}
+
+.contact-form {
+  text-align: left;
+  max-width: 780px;
+  margin: 0 auto;
+  background: var(--white);
+  border-radius: 20px;
+  padding: 2.5rem;
+  box-shadow: 0 8px 32px rgba(20,33,45,0.08);
+  border: 1.5px solid var(--blush);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group.full {
+  margin-bottom: 1.25rem;
+}
+
+label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--navy);
+  text-transform: uppercase;
+}
+
+input, textarea {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.92rem;
+  color: var(--gray);
+  background: var(--cream);
+  border: 1.5px solid var(--blush);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  resize: vertical;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--sage);
+  background: var(--white);
+}
+
+input::placeholder, textarea::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+select {
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.92rem;
+  color: var(--gray);
+  background: var(--cream);
+  border: 1.5px solid var(--blush);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235D8A85' stroke-width='2' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+}
+
+select:focus { border-color: var(--sage); background-color: var(--white); }
+
+.form-submit {
+  text-align: center;
+  margin-top: 1.5rem;
+}
+
+.contact-alt {
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+  color: #999;
+}
+
+.contact-alt a {
+  color: var(--sage);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.contact-alt a:hover { color: var(--navy); }
+
+@media (max-width: 768px) {
+  .form-row { grid-template-columns: 1fr; }
+  .contact-form { padding: 1.5rem; }
 }
 
 /* ── Footer ── */

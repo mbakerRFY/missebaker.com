@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//c/Users/mbaker/AppData/Roaming/Claude/local-agent-mode-sessions/skills-plugin/7e855a5e-cdb5-47a0-ac32-65389b8c50be/68477899-74b8-4db7-9ede-b890ae906a33/skills/docx/**)",
+      "Bash(pandoc \"C:\\\\Users\\\\mbaker\\\\OneDrive - Reach For Youth, Inc\\\\Personal\\\\PURPOSE MADE LLC\\\\MisseBaker_BrandGuide.docx\" -o brand_guide.md)",
+      "Bash(python \"C:\\\\Users\\\\mbaker\\\\AppData\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\skills-plugin\\\\7e855a5e-cdb5-47a0-ac32-65389b8c50be\\\\68477899-74b8-4db7-9ede-b890ae906a33\\\\skills\\\\docx\\\\scripts\\\\office\\\\unpack.py\" \"C:\\\\Users\\\\mbaker\\\\OneDrive - Reach For Youth, Inc\\\\Personal\\\\PURPOSE MADE LLC\\\\MisseBaker_BrandGuide.docx\" \"C:\\\\Users\\\\mbaker\\\\AppData\\\\Roaming\\\\Claude\\\\local-agent-mode-sessions\\\\skills-plugin\\\\7e855a5e-cdb5-47a0-ac32-65389b8c50be\\\\68477899-74b8-4db7-9ede-b890ae906a33\\\\skills\\\\docx\\\\brand_unpacked\")",
+      "PowerShell(py --version 2>&1)",
+      "PowerShell(python3 --version 2>&1)",
+      "PowerShell($src = \"C:\\\\Users\\\\mbaker\\\\OneDrive - Reach For Youth, Inc\\\\Personal\\\\PURPOSE MADE LLC\\\\MisseBaker_BrandGuide.docx\"; $dest = \"$env:TEMP\\\\brand_unpacked\"; if \\(Test-Path $dest\\) { Remove-Item $dest -Recurse -Force }; Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::ExtractToDirectory\\($src, $dest\\); Get-ChildItem $dest -Recurse | Select-Object FullName)",
+      "PowerShell(Get-ChildItem \"$env:TEMP\\\\brand_unpacked\" -Recurse | Select-Object -ExpandProperty FullName)",
+      "PowerShell($xml = [xml]\\(Get-Content \"$env:TEMP\\\\brand_unpacked\\\\word\\\\document.xml\" -Raw\\); $xml.document.body.InnerText)"
+    ]
+  }
+}
