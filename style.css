@@ -506,8 +506,18 @@ select:focus { border-color: var(--sage); background-color: var(--white); }
   .hero-sub { margin: 0 auto 2rem; }
 
   .plane-wrap {
-    width: 160px;
-    height: 130px;
+    width: 100%;
+    height: 200px;
+  }
+
+  .flight-svg {
+    width: 100%;
+    height: 200px;
+  }
+
+  #planeGroup {
+    offset-path: path("M10,140 Q60,40 100,90 Q135,130 165,60 Q188,20 210,50");
+    transform-origin: center;
   }
 
   nav { gap: 1rem; }
