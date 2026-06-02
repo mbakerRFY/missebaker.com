@@ -122,14 +122,20 @@ nav a:hover { color: var(--sage); }
 
 .plane-wrap {
   flex-shrink: 0;
-  width: 300px;
-  height: 240px;
+  width: 360px;
+  height: 360px;
 }
 
 .flight-svg {
-  width: 300px;
-  height: 240px;
+  width: 360px;
+  height: 360px;
   overflow: visible;
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
 }
 
 /* Dashed path draws itself on load */
