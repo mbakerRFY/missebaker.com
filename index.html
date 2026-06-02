@@ -31,19 +31,30 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="plane-wrap" aria-hidden="true">
-        <svg class="flight-svg" viewBox="0 0 420 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="flight-svg" viewBox="0 0 420 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Heart dashed trail starting from plane nose, looping into a heart -->
           <path id="flightPath"
-                d="M10,260 Q80,60 170,160 Q250,240 320,100 Q370,20 410,80"
-                stroke="#C9A96E" stroke-width="3" stroke-dasharray="12,7" fill="none"
-                stroke-dashoffset="800"
-                style="animation: drawPath 3s ease-out forwards, loopPath 4s ease-in-out 3s infinite"/>
-          <g id="planeGroup" style="animation: flyPlane 3s ease-out forwards, floatPlane 4s ease-in-out 3s infinite" transform="translate(-60, -40)">
-            <!-- Elegant paper airplane -->
-            <path d="M0,40 L120,0 L90,80 Z" fill="#5D8A85" stroke="#14212D" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M0,40 L90,80 L55,52 Z" fill="#3d6b67" stroke="#14212D" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M55,52 L90,80" stroke="#14212D" stroke-width="1.5"/>
-            <path d="M55,52 L120,0" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-            <path d="M0,40 L55,52" stroke="#14212D" stroke-width="1" stroke-dasharray="4,3"/>
+                d="M310,140 C290,180 230,200 200,240 C170,280 140,310 120,300
+                   C80,285 60,240 80,200 C95,170 130,160 150,175
+                   C130,155 120,120 140,100 C160,78 195,85 210,110
+                   C225,85 260,78 280,100 C300,120 295,155 275,175
+                   C295,160 330,170 345,200 C365,240 345,285 305,300
+                   C285,310 255,280 225,240"
+                stroke="#E8BCAB" stroke-width="3.5" stroke-dasharray="10,7" fill="none"
+                stroke-dashoffset="1200"
+                style="animation: drawPath 4s ease-out forwards, loopPath 4s ease-in-out 4s infinite"/>
+          <!-- Paper airplane — elegant folded look -->
+          <g id="planeGroup" style="animation: flyPlane 4s ease-out forwards, floatPlane 4s ease-in-out 4s infinite">
+            <!-- Main body top wing -->
+            <path d="M0,0 L110,-30 L80,10 Z" fill="#5D8A85" stroke="#14212D" stroke-width="2" stroke-linejoin="round"/>
+            <!-- Main body bottom wing -->
+            <path d="M0,0 L110,-30 L80,10 L0,0" fill="#4a7a75" stroke="#14212D" stroke-width="2" stroke-linejoin="round"/>
+            <!-- Fold crease bottom -->
+            <path d="M0,0 L80,10 L60,-8" fill="#3d6b67" stroke="#14212D" stroke-width="1.5" stroke-linejoin="round"/>
+            <!-- Wing crease line -->
+            <path d="M60,-8 L110,-30" stroke="rgba(255,255,255,0.4)" stroke-width="1.2"/>
+            <!-- Bottom tail fold -->
+            <path d="M0,0 L60,-8 L80,10" fill="#5D8A85" stroke="#14212D" stroke-width="1.5" stroke-linejoin="round"/>
           </g>
         </svg>
       </div>
