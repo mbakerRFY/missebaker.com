@@ -31,7 +31,23 @@
   <section class="hero">
     <div class="container hero-inner">
       <div class="plane-wrap" aria-hidden="true">
-        <img src="Airplane.svg" alt="Paper airplane with heart trail" class="airplane-img" />
+        <svg class="flight-svg" viewBox="0 0 300 240" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <!-- Clean heart path -->
+          <path id="flightPath"
+                d="M220,60 C220,38 203,22 182,22 C165,22 150,32 144,47 C138,32 123,22 106,22 C85,22 68,38 68,60 C68,110 144,160 144,160 C144,160 220,110 220,60 Z"
+                stroke="#E8BCAB" stroke-width="3.5" stroke-dasharray="10,7" fill="none"
+                stroke-linecap="round"
+                stroke-dashoffset="800"
+                style="animation: drawPath 3s ease-out forwards, loopPath 5s ease-in-out 3s infinite"/>
+          <!-- Paper airplane -->
+          <g id="planeGroup" style="animation: flyPlane 3s ease-out forwards, floatPlane 5s ease-in-out 3s infinite">
+            <path d="M-15,0 L55,-16 L40,10 Z" fill="#5D8A85" stroke="#14212D" stroke-width="1.8" stroke-linejoin="round"/>
+            <path d="M-15,0 L40,10 L32,22 Z" fill="#4a7a75" stroke="#14212D" stroke-width="1.5" stroke-linejoin="round"/>
+            <path d="M18,-6 L55,-16 L40,10 Z" fill="#3d6b67" stroke="#14212D" stroke-width="1.5" stroke-linejoin="round"/>
+            <line x1="-15" y1="0" x2="55" y2="-16" stroke="#14212D" stroke-width="1.5"/>
+            <line x1="18" y1="-6" x2="40" y2="10" stroke="#14212D" stroke-width="1.2"/>
+          </g>
+        </svg>
       </div>
       <div class="hero-text">
         <h1 class="script hero-name">Misse Baker</h1>
