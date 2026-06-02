@@ -122,14 +122,21 @@ nav a:hover { color: var(--sage); }
 
 .plane-wrap {
   flex-shrink: 0;
-  width: 380px;
-  height: 340px;
+  width: 360px;
+  height: 360px;
 }
 
-.flight-svg {
-  width: 380px;
-  height: 340px;
-  overflow: visible;
+.airplane-img {
+  width: 360px;
+  height: 360px;
+  /* Colorize to sage green */
+  filter: invert(53%) sepia(28%) saturate(445%) hue-rotate(129deg) brightness(91%) contrast(89%);
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(-2deg); }
+  50%       { transform: translateY(-12px) rotate(2deg); }
 }
 
 /* Dashed path draws itself on load */
