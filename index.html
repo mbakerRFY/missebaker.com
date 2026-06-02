@@ -32,18 +32,31 @@
     <div class="container hero-inner">
       <div class="plane-wrap" aria-hidden="true">
         <svg class="flight-svg" viewBox="0 0 420 340" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Single clean heart path the plane flies along -->
+
+          <!-- Clean single heart loop — matches reference image -->
           <path id="flightPath"
-                d="M210,300 C140,250 40,200 40,130 C40,70 90,40 140,60 C165,70 190,90 210,115 C230,90 255,70 280,60 C330,40 380,70 380,130 C380,200 280,250 210,300 Z"
-                stroke="#E8BCAB" stroke-width="3.5" stroke-dasharray="10,7" fill="none"
-                stroke-dashoffset="1100"
-                style="animation: drawPath 4s ease-out forwards, loopPath 5s ease-in-out 4s infinite"/>
-          <!-- Elegant paper airplane -->
-          <g id="planeGroup" style="animation: flyPlane 4s ease-out forwards, floatPlane 5s ease-in-out 4s infinite">
-            <path d="M0,0 L100,-28 L72,12 Z" fill="#5D8A85" stroke="#14212D" stroke-width="2" stroke-linejoin="round"/>
-            <path d="M0,0 L72,12 L52,-6 Z" fill="#3d6b67" stroke="#14212D" stroke-width="1.5" stroke-linejoin="round"/>
-            <path d="M52,-6 L100,-28" stroke="rgba(255,255,255,0.35)" stroke-width="1.2"/>
+                d="M310,80 C310,50 290,30 265,30 C245,30 228,42 220,60 C212,42 195,30 175,30 C150,30 130,50 130,80 C130,140 220,200 220,200 C220,200 310,140 310,80 Z"
+                stroke="#E8BCAB" stroke-width="4" stroke-dasharray="11,8" fill="none"
+                stroke-linecap="round"
+                stroke-dashoffset="900"
+                style="animation: drawPath 3.5s ease-out forwards, loopPath 5s ease-in-out 3.5s infinite"/>
+
+          <!-- Paper airplane — exact match to reference: detailed folds, pointing right -->
+          <g id="planeGroup" style="animation: flyPlane 3.5s ease-out forwards, floatPlane 5s ease-in-out 3.5s infinite">
+            <!-- Outer top wing -->
+            <path d="M-10,0 L90,-22 L65,8 Z" fill="#5D8A85" stroke="#14212D" stroke-width="2" stroke-linejoin="round"/>
+            <!-- Outer bottom wing -->
+            <path d="M-10,0 L65,8 L55,22 Z" fill="#5D8A85" stroke="#14212D" stroke-width="2" stroke-linejoin="round"/>
+            <!-- Inner top fold -->
+            <path d="M30,-8 L90,-22 L65,8 Z" fill="#4a7a75" stroke="#14212D" stroke-width="1.5" stroke-linejoin="round"/>
+            <!-- Inner bottom fold -->
+            <path d="M30,-8 L65,8 L55,22 Z" fill="#3d6b67" stroke="#14212D" stroke-width="1.5" stroke-linejoin="round"/>
+            <!-- Center spine -->
+            <line x1="-10" y1="0" x2="90" y2="-22" stroke="#14212D" stroke-width="1.5"/>
+            <!-- Fold line -->
+            <line x1="30" y1="-8" x2="65" y2="8" stroke="#14212D" stroke-width="1.2"/>
           </g>
+
         </svg>
       </div>
       <div class="hero-text">
