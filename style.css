@@ -158,9 +158,9 @@ nav a:hover { color: var(--sage); }
 }
 
 #planeGroup {
-  offset-path: path("M310,140 C290,180 230,200 200,240 C170,280 140,310 120,300 C80,285 60,240 80,200 C95,170 130,160 150,175 C130,155 120,120 140,100 C160,78 195,85 210,110 C225,85 260,78 280,100 C300,120 295,155 275,175 C295,160 330,170 345,200 C365,240 345,285 305,300 C285,310 255,280 225,240");
+  offset-path: path("M210,300 C140,250 40,200 40,130 C40,70 90,40 140,60 C165,70 190,90 210,115 C230,90 255,70 280,60 C330,40 380,70 380,130 C380,200 280,250 210,300 Z");
   offset-rotate: auto;
-  animation: flyPlane 4s ease-out forwards, floatPlane 4s ease-in-out 4s infinite;
+  animation: flyPlane 4s ease-out forwards, floatPlane 5s ease-in-out 4s infinite;
 }
 
 #flightPath {
