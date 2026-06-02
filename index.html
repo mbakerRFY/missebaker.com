@@ -30,22 +30,24 @@
   <!-- HERO -->
   <section class="hero">
     <div class="container hero-inner">
-      <div class="plane-wrap" aria-hidden="true">
-        <svg class="flight-svg" viewBox="0 0 220 160" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <!-- Dashed flight path that draws itself -->
-          <path id="flightPath"
-                d="M10,140 Q60,40 100,90 Q135,130 165,60 Q188,20 210,50"
-                stroke="#C9A96E" stroke-width="2" stroke-dasharray="8,5" fill="none"
-                stroke-dashoffset="400"
-                style="animation: drawPath 3s ease-out forwards, loopPath 4s ease-in-out 3s infinite"/>
-          <!-- Paper airplane that flies along the path -->
-          <g id="planeGroup" style="animation: flyPlane 3s ease-out forwards, floatPlane 4s ease-in-out 3s infinite">
-            <polygon points="0,-10 20,0 0,10" fill="#5D8A85" stroke="#14212D" stroke-width="1.5"/>
-            <line x1="0" y1="10" x2="10" y2="0" stroke="#14212D" stroke-width="1.5"/>
-          </g>
-        </svg>
-      </div>
       <div class="hero-text">
+        <!-- Plane flies above the name -->
+        <div class="plane-wrap" aria-hidden="true">
+          <svg class="flight-svg" viewBox="0 0 600 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMid meet">
+            <!-- Dashed flight path -->
+            <path id="flightPath"
+                  d="M-20,90 Q80,10 180,70 Q280,120 380,40 Q460,0 560,30"
+                  stroke="#C9A96E" stroke-width="2.5" stroke-dasharray="10,6" fill="none"
+                  stroke-dashoffset="800"
+                  style="animation: drawPath 3s ease-out forwards, loopPath 4s ease-in-out 3s infinite"/>
+            <!-- Big paper airplane -->
+            <g id="planeGroup" style="animation: flyPlane 3s ease-out forwards, floatPlane 4s ease-in-out 3s infinite">
+              <polygon points="0,-18 48,0 0,18" fill="#5D8A85" stroke="#14212D" stroke-width="2"/>
+              <line x1="0" y1="18" x2="24" y2="0" stroke="#14212D" stroke-width="2"/>
+              <line x1="24" y1="0" x2="48" y2="0" stroke="#14212D" stroke-width="1.5" stroke-dasharray="4,3"/>
+            </g>
+          </svg>
+        </div>
         <h1 class="script hero-name">Misse Baker</h1>
         <p class="hero-llc">PURPOSE MADE LLC</p>
         <p class="hero-tagline">Where Mission Meets Momentum</p>
