@@ -41,20 +41,20 @@
                 stroke-dashoffset="900"
                 style="animation: drawPath 3.5s ease-out forwards, loopPath 5s ease-in-out 3.5s infinite"/>
 
-          <!-- Paper airplane — exact match to reference: detailed folds, pointing right -->
+          <!-- Paper airplane — large, detailed, pointing upper right -->
           <g id="planeGroup" style="animation: flyPlane 3.5s ease-out forwards, floatPlane 5s ease-in-out 3.5s infinite">
             <!-- Outer top wing -->
-            <path d="M-10,0 L90,-22 L65,8 Z" fill="#5D8A85" stroke="#14212D" stroke-width="2" stroke-linejoin="round"/>
+            <path d="M-20,0 L140,-38 L100,16 Z" fill="#5D8A85" stroke="#14212D" stroke-width="2.5" stroke-linejoin="round"/>
             <!-- Outer bottom wing -->
-            <path d="M-10,0 L65,8 L55,22 Z" fill="#5D8A85" stroke="#14212D" stroke-width="2" stroke-linejoin="round"/>
-            <!-- Inner top fold -->
-            <path d="M30,-8 L90,-22 L65,8 Z" fill="#4a7a75" stroke="#14212D" stroke-width="1.5" stroke-linejoin="round"/>
-            <!-- Inner bottom fold -->
-            <path d="M30,-8 L65,8 L55,22 Z" fill="#3d6b67" stroke="#14212D" stroke-width="1.5" stroke-linejoin="round"/>
-            <!-- Center spine -->
-            <line x1="-10" y1="0" x2="90" y2="-22" stroke="#14212D" stroke-width="1.5"/>
-            <!-- Fold line -->
-            <line x1="30" y1="-8" x2="65" y2="8" stroke="#14212D" stroke-width="1.2"/>
+            <path d="M-20,0 L100,16 L85,38 Z" fill="#5D8A85" stroke="#14212D" stroke-width="2.5" stroke-linejoin="round"/>
+            <!-- Inner top fold (darker) -->
+            <path d="M45,-14 L140,-38 L100,16 Z" fill="#4a7a75" stroke="#14212D" stroke-width="2" stroke-linejoin="round"/>
+            <!-- Inner bottom fold (darkest) -->
+            <path d="M45,-14 L100,16 L85,38 Z" fill="#3d6b67" stroke="#14212D" stroke-width="2" stroke-linejoin="round"/>
+            <!-- Center spine line -->
+            <line x1="-20" y1="0" x2="140" y2="-38" stroke="#14212D" stroke-width="2"/>
+            <!-- Inner fold crease -->
+            <line x1="45" y1="-14" x2="100" y2="16" stroke="#14212D" stroke-width="1.8"/>
           </g>
 
         </svg>
